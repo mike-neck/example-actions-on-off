@@ -4,7 +4,11 @@ name: "github actions を無効化してから有効化"
 
 # Controls when the workflow will run
 on:
-  pull_request: {}
+  pull_request:
+    types:
+      - opened
+      - synchronized
+      - reopened
   workflow_dispatch: {}
 
 jobs:
