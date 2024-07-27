@@ -19,3 +19,5 @@ jobs:
         run: echo "${{ toJson(github.event) }}"
       - name: github json
         run: echo "${{ toJson(github) }}"
+      - name: github head
+        run: jq '.head' <<< "${{ toJson(github) }}"
