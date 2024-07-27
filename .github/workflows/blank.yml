@@ -20,4 +20,4 @@ jobs:
       - name: github json
         run: echo "${{ toJson(github) }}" | tee github.json
       - name: github head
-        run: jq '.head' github.json
+        run: echo "${{ toJson(github) }}" | jq '.head'
